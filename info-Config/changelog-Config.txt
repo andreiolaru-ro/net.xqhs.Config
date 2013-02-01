@@ -1,0 +1,79 @@
+#-------------------------------------------------------------------------------
+# Copyright (C) 2013 Andrei Olaru.
+# 
+# This file is part of Config.
+# 
+# Config is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+# 
+# Config is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along with Config.  If not, see <http://www.gnu.org/licenses/>.
+#-------------------------------------------------------------------------------
+====== The changelog for the Config util  ======
+
+// This file should be in DokuWiki syntax [[http://www.dokuwiki.org/syntax]] //
+// exception: in the file use -- and -/ instead of <del> and </del> for strikethroughs
+
+
+
+===== 23.11.2012 Creating JARS (andreiolaru) =====
+  - recreated the git repo (all previous history lost)
+  - fixed jar exporting
+
+
+===== 05.09.2012 Creating JAR (andreiolaru) =====
+
+  - created tools for creating the jar and the javadoc.
+
+
+
+===== previous commits in the aTrium project (before 04.09.2012) =====
+
+===== 27.08.2012 Work in Absolute and Unit; fixes and doc (andreiolaru) =====
+
+  - fixes to additional element generation (untested)
+  - fixes of todo tags
+  - fixes and documentation to some Soda elements
+  - fix of Absolute log names
+  - move Absolute to soda
+  - documentation of Unit and UnitConfigData; also some cleaning.
+
+===== 25.08.2012 toString and logging fixes and rehaul (andreiolaru) =====
+
+  - renamed Unit.getName() to getUnitName() because it is more meaningful
+  - rehauled the string rendition of absolutes
+  - introduced short versions for permissions
+
+===== 21-25.08.2012 source organization; system and communicator modifications (andreiolaru) =====
+
+  - Created the base.util package, featuring Rval and Config, and also featuring the QuickSet, currently unused.
+  - modified how the system is started -> it will be started at construction time (since it it configured beforehand through the Config)
+  - introduced command execution (incomplete)
+  - configured logs for Absolute and Soda (not working correctly yet)
+
+===== 17.08.2012 logging fixes (andreiolaru) =====
+
+  - fixes on information files.
+  - comments and small changes on the logging structure.
+  - move to Log4J for logging. Offers better features (e.g. pattern output)
+   
+
+===== 01-02.08.2012 structure, warnings, fixes (andreiolaru) =====
+
+  - Moved atriumL project to its own directory.
+  - improved logging structure.
+  - adapted files to the new logging structure
+  - removed all warnings and errors.
+  - Fixed some project settings
+  
+
+===== 31.07.2012 first commits (andreiolaru) =====
+
+  - added information files.
+  
+  
+  
+====== templates: ======
+
+===== ..2012 - (andreiolaru) =====
+  

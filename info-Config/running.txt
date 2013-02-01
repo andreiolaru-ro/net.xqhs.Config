@@ -1,0 +1,20 @@
+#-------------------------------------------------------------------------------
+# Copyright (C) 2013 Andrei Olaru.
+# 
+# This file is part of Config.
+# 
+# Config is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+# 
+# Config is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along with Config.  If not, see <http://www.gnu.org/licenses/>.
+#-------------------------------------------------------------------------------
+====== running the Config util  ======
+
+Building the Jar:
+  - Ant-run output/export.xml
+  - the jar will contain information, classes, sources, and doc (in the "doc") path.
+  
+Running:
+  - import Config.jar (one could use [part-of] the included importer)
+  - just extend the Config class.

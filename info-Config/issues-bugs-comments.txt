@@ -1,0 +1,45 @@
+#-------------------------------------------------------------------------------
+# Copyright (C) 2013 Andrei Olaru.
+# 
+# This file is part of Config.
+# 
+# Config is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+# 
+# Config is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License along with Config.  If not, see <http://www.gnu.org/licenses/>.
+#-------------------------------------------------------------------------------
+====== issues bugs comments for the Config util ======
+
+// This file should be in DokuWiki syntax [[http://www.dokuwiki.org/syntax]] //
+// exception: in the file use -- and -/ instead of <del> and </del> for strikethroughs
+
+In this file:
+- always number in order, keep the numbers of items;
+- move solved issues, comments and bugs to the solved section, keeping the same number
+
+=============================================================================================================================================
+
+===== Bugs - things that are expected to work and don't work as expected
+
+
+== solved
+
+
+
+=============================================================================================================================================
+
+===== Issues - things that work as expected, but should work in a different way / be implemented differently
+
+1. There should be created an example of usage, as well as tests.
+
+== solved
+
+=============================================================================================================================================
+
+====== Comments - general comments and questions
+
+
+
+== solved
+
