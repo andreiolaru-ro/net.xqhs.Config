@@ -16,6 +16,9 @@
 
 
 
+===== 01.02.2013 GitHub (andreiolaru) =====
+  - Pushed project to GitHub, with a clean history
+
 ===== 23.11.2012 Creating JARS (andreiolaru) =====
   - recreated the git repo (all previous history lost)
   - fixed jar exporting
