@@ -1,0 +1,3 @@
+[submodule "doc-Config/wiki"]
+	path = doc-Config/wiki
+	url = git@github.com:andreiolaru-ro/net.xqhs.Config.wiki.git
