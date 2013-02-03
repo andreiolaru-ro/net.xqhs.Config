@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="Config" default="wiki-push" basedir="../">
+	<target name="wiki-push">
+		<exec osfamily="Windows" vmlauncher="false" dir="doc-Config/wiki/" executable="cmd">
+		    <arg value="/c"/>
+		    <arg value="start ..\..\scripts\additional\wiki-push.bat"/>
+		</exec>
+	</target>
+</project>
