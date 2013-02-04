@@ -14,7 +14,7 @@
 @echo ====================================
 @echo If anything to commit, ready to push (ready to insert passphrase); otherwise close this window
 @pause
-@ssh-agent bash -c "ssh-add $HOME/.ssh/githubkey; git push"
+@ssh-agent bash -c "ssh-add $HOME/.ssh/githubkey; git push origin %2"
 @echo ====================================
 @echo Supposedly done.
 @pause

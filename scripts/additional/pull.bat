@@ -12,7 +12,7 @@ git checkout %2
 @echo ====================================
 @echo Ready to pull (ready to insert passphrase); otherwise close this window
 @pause
-@ssh-agent bash -c "ssh-add $HOME/.ssh/githubkey; git pull"
+@ssh-agent bash -c "ssh-add $HOME/.ssh/githubkey; git pull origin %2"
 @echo ====================================
 @echo Supposedly done.
 @pause
