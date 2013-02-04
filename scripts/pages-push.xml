@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="Config" default="wiki-pages" basedir="../">
+	<target name="wiki-pages">
+		<exec osfamily="Windows" vmlauncher="false" dir="doc-Config/pages/" executable="cmd">
+		    <arg value="/c"/>
+		    <arg value="start ..\..\scripts\additional\push.bat pages gh-pages"/>
+		</exec>
+	</target>
+</project>

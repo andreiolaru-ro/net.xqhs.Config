@@ -31,7 +31,7 @@
 		         author="true"
 		         classpath="."
 		         classpathref="build.classpath"
-		         destdir="doc-${project-name}"
+		         destdir="doc-${project-name}/pages/javadoc"
 		         nodeprecated="false"
 		         nodeprecatedlist="false"
 		         noindex="false"

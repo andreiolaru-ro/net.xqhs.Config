@@ -1,8 +1,9 @@
-@echo Pulling changes from the wiki.
+@echo Pulling changes from %1.
 @echo This assumes you have git installed on your system and in PATH (executing the command 'git' in console writes the possible git operations).
 @echo If anything goes wrong, please use the command line to execute commands in this file.
 @echo Working in:
 @cd
+git checkout %2
 @echo ====================================
 @echo Ready to fetch (ready to insert passphrase)...
 @pause

@@ -3,7 +3,7 @@
 	<target name="wiki-pull">
 		<exec osfamily="Windows" vmlauncher="false" dir="doc-Config/wiki/" executable="cmd">
 		    <arg value="/c"/>
-		    <arg value="start ..\..\scripts\additional\wiki-pull.bat"/>
+		    <arg value="start ..\..\scripts\additional\pull.bat wiki master"/>
 		</exec>
 	</target>
 </project>
