@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="Config" default="wiki-git" basedir="../">
+	<target name="wiki-git">
+		<exec osfamily="Windows" vmlauncher="false" dir="doc-Config/wiki/" executable="cmd">
+		    <arg value="/c"/>
+		    <arg value="start cmd"/>
+		</exec>
+	</target>
+</project>
