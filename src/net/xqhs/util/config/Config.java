@@ -53,7 +53,7 @@ package net.xqhs.util.config;
  * @author Andrei Olaru
  * 
  */
-public abstract class Config
+public abstract class Config implements Configurable
 {
 	public class ConfigLockedException extends Exception
 	{
@@ -73,7 +73,7 @@ public abstract class Config
 		makeDefaults();
 	}
 	
-	protected Config makeDefaults()
+	public Config makeDefaults()
 	{
 		return this;
 	}
@@ -84,8 +84,20 @@ public abstract class Config
 		return this;
 	}
 	
+	public final Config build()
+	{
+		return lock();
+	}
+	
+	@Override
+	public void ensureLocked()
+	{
+		if(!locked)
+			lock();
+	}
+	
 	// may be overridden
-	protected void locked() throws ConfigLockedException
+	public void locked() throws ConfigLockedException
 	{
 		if(locked)
 			throw new ConfigLockedException();
