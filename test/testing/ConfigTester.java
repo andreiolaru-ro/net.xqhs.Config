@@ -13,6 +13,12 @@ package testing;
 
 import net.xqhs.util.config.Config;
 
+/**
+ * The config teste currently does nothing.
+ * 
+ * @author Andrei Olaru
+ *
+ */
 public class ConfigTester extends Config
 {
 	// TODO

@@ -52,7 +52,7 @@
 	</target>
 
 	<target name="pack">
-		<jar destfile="output/${project-name}.jar">
+		<jar destfile="deploy/${project-name}.jar">
 			<fileset dir="bin" includes="net/" />
 			<fileset dir="."
 			         includes="src/,doc-${project-name}/,info-${project-name}/"
