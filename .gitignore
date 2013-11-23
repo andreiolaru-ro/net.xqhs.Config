@@ -1,4 +1,5 @@
 /bin/
-/doc*/
+/doc-Config/pages
+/doc-Config/wiki
 /output/Config.jar
 /bin-java6
