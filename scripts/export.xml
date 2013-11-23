@@ -57,10 +57,19 @@
 			<fileset dir="."
 			         includes="src/,doc-${project-name}/,info-${project-name}/"
 			/>
-			<zipgroupfileset dir="." includes="lib/" />
 		</jar>
 	</target>
-
-	<target name="complete-export" depends="javadoc,pack" />
+	
+	<target name="pack-java6">
+		<ant antfile="scripts/build-java6.xml" dir="." />
+		<jar destfile="deploy/java6/${project-name}.jar">
+			<fileset dir="bin-java6" includes="net/" />
+			<fileset dir="."
+			         includes="src/,doc-${project-name}/,info-${project-name}/"
+			/>
+		</jar>
+	</target>
+	
+	<target name="complete-export" depends="javadoc,pack,pack-java6" />
 
 </project>
