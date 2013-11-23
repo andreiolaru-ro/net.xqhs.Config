@@ -70,6 +70,10 @@
 		</jar>
 	</target>
 	
-	<target name="complete-export" depends="javadoc,pack,pack-java6" />
+	<target name="copy-importer">
+		<copy file="scripts/outside-importer.xml" tofile="deploy/importer.xml" />
+	</target>
+	
+	<target name="complete-export" depends="javadoc,pack,pack-java6,copy-importer" />
 
 </project>
