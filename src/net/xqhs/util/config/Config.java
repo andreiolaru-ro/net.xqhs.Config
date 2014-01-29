@@ -11,7 +11,6 @@
  ******************************************************************************/
 package net.xqhs.util.config;
 
-
 /**
  * The Config is to be used as a base class / paradigm for any construction-time configuration that needs a large number
  * of parameters and considers optional and default parameters.
@@ -20,9 +19,9 @@ package net.xqhs.util.config;
  * A mandatory configuration is a set of parameters that are absolutely necessary for the configuration. There may be
  * more such sets, and they may intersect.
  * <p>
- * In case of a config with ancestors, like RootConfig -> ChildConfig -> CurrentConfig, since a setter returns an
- * instance of its class (which may not be the original calling class), chained setters should be called for convenience
- * in the order:
+ * In case of a config with ancestors, like RootConfig &rarr; ChildConfig &rarr; CurrentConfig, since a setter returns
+ * an instance of its class (which may not be the original calling class), chained setters should be called for
+ * convenience in the order:
  * <code>currentConfigInstance.setParamInCurrentConfig().setOtherParamInCurrentConfig().setParamInChildConfig().setParamInRootConfig()</code>
  * Obviously, a RootConfig instance will be returned in the end, but that can be casted back to CurrentConfig.
  * <p>
@@ -45,9 +44,9 @@ package net.xqhs.util.config;
  * done by calling the appropriate setter function.
  * <li>If the configured object inherits from an ancestor class, the Config should inherit the Config of the ancestor
  * class (if any).
- * <li>After configuration is complete, the Config can be <code>locked</code> (by using the <code>lock()</code>
- * function). It can never be unlocked. Setters may check that the configuration is locked by calling
- * <code>locked()</code>, that will automatically throw an exception if necessary.
+ * <li>After configuration is complete, the Config can be {@link #locked()} (by using the {@link #lock()} function). It
+ * can never be unlocked. Setters may check that the configuration is locked by calling {@link #locked()}, that will
+ * automatically throw an exception if necessary.
  * </ul>
  * 
  * @author Andrei Olaru
@@ -55,8 +54,20 @@ package net.xqhs.util.config;
  */
 public abstract class Config implements Configurable
 {
+	/**
+	 * Exception that is thrown when a 'locked' setter is called on a locked {@link Config} instance. More precisely, it
+	 * is thrown if the setter method calls {@link #locked()} and the instance was currently locked.
+	 * <p>
+	 * It means that the setting is not supposed to be changed after the construction / setting phase has been
+	 * completed.
+	 * 
+	 * @author Andrei Olaru
+	 */
 	public class ConfigLockedException extends Exception
 	{
+		/**
+		 * The serial UID.
+		 */
 		private static final long	serialVersionUID	= 8254604960026434594L;
 		
 		@Override
@@ -66,24 +77,33 @@ public abstract class Config implements Configurable
 		}
 	}
 	
-	private boolean locked = false;
+	/**
+	 * Retains the 'locked' state of the Config instance.
+	 */
+	private boolean	locked	= false;
 	
+	/**
+	 * Default constructor, that calls the {@link #makeDefaults()} method.
+	 */
 	public Config()
 	{
 		makeDefaults();
 	}
 	
+	@Override
 	public Config makeDefaults()
 	{
 		return this;
 	}
 	
+	@Override
 	public Config lock()
 	{
 		locked = true;
 		return this;
 	}
 	
+	@Override
 	public final Config build()
 	{
 		return lock();
@@ -97,6 +117,7 @@ public abstract class Config implements Configurable
 	}
 	
 	// may be overridden
+	@Override
 	public void locked() throws ConfigLockedException
 	{
 		if(locked)
@@ -104,11 +125,17 @@ public abstract class Config implements Configurable
 	}
 	
 	// may not be overridden
-	protected final void lockEx() throws ConfigLockedException
+	/**
+	 * Alias of {@link #locked()} that cannot be overridden, meaning that a call to this method is sure to do what the
+	 * implementation in {@link Config} specifies, so that extending classes cannot avoid the exception by overriding
+	 * {@link #locked()}.
+	 * 
+	 * @throws ConfigLockedException
+	 */
+	protected final void lockedEx() throws ConfigLockedException
 	{
 		if(locked)
 			throw new ConfigLockedException();
 	}
-	
 	
 }
