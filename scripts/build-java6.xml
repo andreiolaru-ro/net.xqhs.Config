@@ -17,6 +17,9 @@
 	<property name="build.sysclasspath" value="ignore" />
 
 	<target name="build-java6">
+	    <delete>
+			<fileset dir="${build}" />
+		</delete>
 		<javac srcdir="${src}" destdir="${build}" fork="true" target="1.6" source="1.6" classpath=""/>
 	</target>
 
